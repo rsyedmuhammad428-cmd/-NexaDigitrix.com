@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa Digitrix | Connecting Brands with Digital Growth</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-inner">
+            <img src="https://i.postimg.cc/mZdCXhkP/0e2-Nexa-Digitrix-Logo.png" alt="Nexa Digitrix"
+                class="loader-logo-img">
+            <div class="loader-bar">
+                <div class="loader-fill"></div>
+            </div>
+            <p class="loader-text">Loading Experience...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#home" class="logo">
+                <img src="https://i.postimg.cc/mZdCXhkP/0e2-Nexa-Digitrix-Logo.png" alt="Nexa Digitrix">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="mobile-right">
+                <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-glow g1"></div>
+        <div class="hero-glow g2"></div>
+        <div class="hero-glow g3"></div>
+
+        <div class="container hero-content">
+            <div class="hero-badge reveal-right">
+                <span class="badge-pulse"></span>
+                Digital Creative Agency · Est. 2019
+            </div>
+            <h1 class="reveal-right d1">Let's Create <br><span class="gradient-text" id="typewriter"></span><span
+                    class="cursor-blink">|</span></h1>
+            <p class="hero-sub reveal-right d2">Connecting brands with digital growth. We help businesses grow online
+                with powerful visuals, engaging videos, and smart social media marketing.</p>
+
+            <div class="hero-pills reveal-right d3">
+                <div class="pill"><i class="fas fa-pen-nib"></i> Graphic Design</div>
+                <div class="pill"><i class="fas fa-film"></i> Video Editing</div>
+                <div class="pill"><i class="fas fa-chart-line"></i> Social Growth</div>
+                <div class="pill"><i class="fas fa-globe"></i> Web Design</div>
+            </div>
+
+            <div class="hero-ctas reveal-right d4">
+                <a href="#contact" class="cta-btn"><span>Start Your Project</span><i class="fas fa-arrow-right"></i></a>
+                <a href="#portfolio" class="cta-ghost">View Our Work <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <div class="hero-stats reveal-right d5">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="100">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Projects Done</div>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="50">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-sep"></div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="5">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>Graphic Design</span><span class="msep">✦</span>
+                <span>Video Editing</span><span class="msep">✦</span>
+                <span>Social Media Marketing</span><span class="msep">✦</span>
+                <span>Web Development</span><span class="msep">✦</span>
+                <span>SEO Optimization</span><span class="msep">✦</span>
+                <span>Brand Identity</span><span class="msep">✦</span>
+                <span>Content Writing</span><span class="msep">✦</span>
+                <span>Digital Ads</span><span class="msep">✦</span>
+                <span>ERP Solutions</span><span class="msep">✦</span>
+                <span>Graphic Design</span><span class="msep">✦</span>
+                <span>Video Editing</span><span class="msep">✦</span>
+                <span>Social Media Marketing</span><span class="msep">✦</span>
+                <span>Web Development</span><span class="msep">✦</span>
+                <span>SEO Optimization</span><span class="msep">✦</span>
+                <span>Brand Identity</span><span class="msep">✦</span>
+                <span>Content Writing</span><span class="msep">✦</span>
+                <span>Digital Ads</span><span class="msep">✦</span>
+                <span>ERP Solutions</span><span class="msep">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="section-pad">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <span class="section-tag">What We Do</span>
+                <h2>Services Built to <span class="gradient-text">Scale Your Brand</span></h2>
+                <p>We blend creativity with strategy to deliver solutions that actually work — from design to digital
+                    growth.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal-right d1">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800&auto=format&fit=crop"
+                            alt="Website Design">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Website Design & Development</h3>
+                        <p>Modern, responsive websites that turn visitors into paying customers with seamless UX and
+                            strong performance.</p>
+                        <ul class="service-list">
+                            <li>Custom design & mobile-friendly layouts</li>
+                            <li>E-commerce & CMS development</li>
+                            <li>UI/UX design & wireframing</li>
+                            <li>Ongoing maintenance & support</li>
+                        </ul>
+                        <div class="service-tags"><span>React</span><span>WordPress</span><span>Shopify</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal-right d2">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=800&auto=format&fit=crop"
+                            alt="SEO">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-search"></i></div>
+                        <h3>Search Engine Optimization</h3>
+                        <p>Rank higher on search engines with data-driven SEO strategies focused on long-term organic
+                            growth.</p>
+                        <ul class="service-list">
+                            <li>Keyword research & analysis</li>
+                            <li>On-page & technical SEO</li>
+                            <li>Content optimization</li>
+                            <li>Monthly reporting & insights</li>
+                        </ul>
+                        <div class="service-tags"><span>Google</span><span>Analytics</span><span>Backlinks</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal-right d3">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop"
+                            alt="Social Media">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-share-nodes"></i></div>
+                        <h3>Social Media Marketing</h3>
+                        <p>Grow your brand presence and engage your audience across major social platforms with
+                            strategic campaigns.</p>
+                        <ul class="service-list">
+                            <li>Facebook, Instagram & LinkedIn</li>
+                            <li>Content planning & creation</li>
+                            <li>Paid ads & performance tracking</li>
+                            <li>Community management</li>
+                        </ul>
+                        <div class="service-tags"><span>Instagram</span><span>Facebook</span><span>LinkedIn</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal-right d1">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+                            alt="Digital Marketing">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Digital Marketing & Paid Ads</h3>
+                        <p>Result-driven advertising campaigns optimized for maximum ROI and measurable conversions.</p>
+                        <ul class="service-list">
+                            <li>Google Ads & Meta Ads</li>
+                            <li>YouTube advertising</li>
+                            <li>Budget planning & optimization</li>
+                            <li>Conversion rate optimization</li>
+                        </ul>
+                        <div class="service-tags"><span>Google Ads</span><span>Meta</span><span>YouTube</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal-right d2">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1636633762833-5d1658f1e29b?q=80&w=800&auto=format&fit=crop"
+                            alt="Branding">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-fingerprint"></i></div>
+                        <h3>Branding & Identity Design</h3>
+                        <p>Build a strong, memorable brand identity that sets you apart from competitors and connects
+                            with audiences.</p>
+                        <ul class="service-list">
+                            <li>Logo design & brand systems</li>
+                            <li>Visual guidelines & style guides</li>
+                            <li>Rebranding solutions</li>
+                            <li>Brand strategy & positioning</li>
+                        </ul>
+                        <div class="service-tags"><span>Logo</span><span>Identity</span><span>Guidelines</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal-right d3">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?q=80&w=800&auto=format&fit=crop"
+                            alt="Graphic Design">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-layer-group"></i></div>
+                        <h3>Graphic Designing</h3>
+                        <p>Visually compelling designs that communicate your message clearly and strengthen your brand
+                            image.</p>
+                        <ul class="service-list">
+                            <li>Social media creatives</li>
+                            <li>Brochures, flyers & banners</li>
+                            <li>Business cards & stationery</li>
+                            <li>UI design assets</li>
+                        </ul>
+                        <div class="service-tags"><span>Illustrator</span><span>Photoshop</span><span>Figma</span></div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal-right d1">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop"
+                            alt="Content Writing">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-pen-fancy"></i></div>
+                        <h3>Content Writing</h3>
+                        <p>Engaging and persuasive content that builds trust, improves SEO, and converts visitors into
+                            customers.</p>
+                        <ul class="service-list">
+                            <li>Website & landing page content</li>
+                            <li>SEO blogs & articles</li>
+                            <li>Copywriting & product descriptions</li>
+                            <li>Social media content</li>
+                        </ul>
+                        <div class="service-tags"><span>SEO Writing</span><span>Copywriting</span><span>Blogging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal-right d2">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop"
+                            alt="Video Editing">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-film"></i></div>
+                        <h3>Video Editing</h3>
+                        <p>Stories that move and convert. Raw footage into professional videos that grab attention and
+                            drive results.</p>
+                        <ul class="service-list">
+                            <li>Social media reels & shorts</li>
+                            <li>Promotional & ad videos</li>
+                            <li>YouTube editing</li>
+                            <li>Motion graphics</li>
+                        </ul>
+                        <div class="service-tags"><span>Premiere Pro</span><span>After Effects</span><span>CapCut</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card reveal-right d3">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                            alt="ERP Solutions">
+                        <div class="service-img-overlay"></div>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-icon-box"><i class="fas fa-server"></i></div>
+                        <h3>ERP & Business Solutions</h3>
+                        <p>Smart ERP systems that optimize your business operations, efficiency, automation, and
+                            decision-making.</p>
+                        <ul class="service-list">
+                            <li>Process automation</li>
+                            <li>Inventory management systems</li>
+                            <li>HR & payroll management</li>
+                            <li>Advanced reporting & analytics</li>
+                        </ul>
+                        <div class="service-tags"><span>Automation</span><span>ERP</span><span>Analytics</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section id="why-choose-us" class="section-pad why-section">
+        <div class="why-bg-shape"></div>
+        <div class="container">
+            <div class="section-title reveal-up">
+                <span class="section-tag">Why Us</span>
+                <h2>Why Choose <span class="gradient-text">Nexa Digitrix</span></h2>
+                <p>We are dedicated to your success with a client-focused approach and proven results.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal-right d1">
+                    <div class="feature-icon-wrap"><i class="fas fa-bullseye"></i></div>
+                    <h4>Result-Driven Strategies</h4>
+                    <p>Every campaign is backed by data and optimized for measurable, real-world results.</p>
+                </div>
+                <div class="feature-card reveal-right d2">
+                    <div class="feature-icon-wrap"><i class="fas fa-users-cog"></i></div>
+                    <h4>Experienced Team</h4>
+                    <p>Our specialists bring years of cross-industry expertise to every project we take on.</p>
+                </div>
+                <div class="feature-card reveal-right d3">
+                    <div class="feature-icon-wrap"><i class="fas fa-comments"></i></div>
+                    <h4>Transparent Communication</h4>
+                    <p>We keep you in the loop at every stage — no surprises, just clear honest updates.</p>
+                </div>
+                <div class="feature-card reveal-right d1">
+                    <div class="feature-icon-wrap"><i class="fas fa-tags"></i></div>
+                    <h4>Affordable Packages</h4>
+                    <p>Premium quality digital services that fit your budget — no compromise on value.</p>
+                </div>
+                <div class="feature-card reveal-right d2">
+                    <div class="feature-icon-wrap"><i class="fas fa-heart"></i></div>
+                    <h4>Client-Focused Approach</h4>
+                    <p>Your success is our success. We build long-term relationships, not just one-time projects.</p>
+                </div>
+                <div class="feature-card reveal-right d3">
+                    <div class="feature-icon-wrap"><i class="fas fa-rocket"></i></div>
+                    <h4>Fast Delivery</h4>
+                    <p>We respect deadlines and deliver high-quality work on time, every time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section id="our-process" class="section-pad process-section">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <span class="section-tag">How We Work</span>
+                <h2>Our <span class="gradient-text">Process</span></h2>
+                <p>A systematic, proven approach to deliver excellence every single time.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step reveal-right d1">
+                    <div class="step-icon-wrap"><i class="fas fa-magnifying-glass"></i></div>
+                    <div class="step-num">01</div>
+                    <h4>Discovery & Research</h4>
+                    <p>Deep-dive into your business, audience, and goals to lay a solid foundation.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step reveal-right d2">
+                    <div class="step-icon-wrap"><i class="fas fa-map"></i></div>
+                    <div class="step-num">02</div>
+                    <h4>Strategy Planning</h4>
+                    <p>Craft a tailored digital strategy aligned with your brand objectives.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step reveal-right d3">
+                    <div class="step-icon-wrap"><i class="fas fa-pencil-ruler"></i></div>
+                    <div class="step-num">03</div>
+                    <h4>Design & Development</h4>
+                    <p>Our creatives bring the strategy to life with stunning designs and clean code.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step reveal-right d4">
+                    <div class="step-icon-wrap"><i class="fas fa-rocket"></i></div>
+                    <div class="step-num">04</div>
+                    <h4>Launch & Optimization</h4>
+                    <p>Deploy, test, and optimize to ensure everything performs at its best.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step reveal-right d5">
+                    <div class="step-icon-wrap"><i class="fas fa-chart-line"></i></div>
+                    <div class="step-num">05</div>
+                    <h4>Continuous Growth</h4>
+                    <p>Monitor, analyze, and refine for long-term sustainable success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section-pad">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-wrap reveal-right d1">
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                            alt="Our Team">
+                    </div>
+                    <div class="about-img-badge">
+                        <div class="badge-num">5+</div>
+                        <div class="badge-txt">Years of Excellence</div>
+                    </div>
+                    <div class="about-img-float">
+                        <i class="fas fa-award"></i>
+                        <span>Award Winning Agency</span>
+                    </div>
+                </div>
+                <div class="about-text reveal-right d2">
+                    <span class="section-tag" style="display:inline-block; margin-bottom:1rem;">Who We Are</span>
+                    <h2>Passionate About Helping <span class="gradient-text">Brands Stand Out</span></h2>
+                    <p>We are a creative digital agency passionate about helping brands stand out in the digital world.
+                        Our team combines creativity, strategy, and technology to deliver designs and marketing
+                        solutions that connect with audiences and drive growth.</p>
+                    <p>Whether you're a startup or an established business, we work closely with you to bring your
+                        vision to life — every step of the way.</p>
+                    <div class="about-mission">
+                        <div class="mission-icon"><i class="fas fa-crosshairs"></i></div>
+                        <div>
+                            <h4>Our Mission</h4>
+                            <p>To create impactful digital content that helps brands grow, engage, and succeed online.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="about-stat"><span class="a-stat-num">100+</span><span>Projects Done</span></div>
+                        <div class="about-stat"><span class="a-stat-num">50+</span><span>Happy Clients</span></div>
+                        <div class="about-stat"><span class="a-stat-num">9</span><span>Services Offered</span></div>
+                    </div>
+                    <a href="#contact" class="cta-btn"
+                        style="margin-top:2rem;display:inline-flex;align-items:center;gap:.6rem;"><span>Work With
+                            Us</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section id="portfolio" class="section-pad">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <span class="section-tag">Our Work</span>
+                <h2>Recent <span class="gradient-text">Projects</span></h2>
+                <p>Explore our latest work in graphic design, video editing, and digital marketing.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal-right d1"
+                    data-full="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974">
+                    <div class="portfolio-img"><img
+                            src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop"
+                            alt="Social Media"></div>
+                    <div class="portfolio-overlay">
+                        <span class="p-tag">Social Media</span>
+                        <h4>Social Media Growth Campaign</h4>
+                        <p>Instagram & Facebook Strategy</p>
+                        <div class="p-view-btn"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal-right d2"
+                    data-full="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?q=80&w=2071">
+                    <div class="portfolio-img"><img
+                            src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?q=80&w=800&auto=format&fit=crop"
+                            alt="Branding"></div>
+                    <div class="portfolio-overlay">
+                        <span class="p-tag">Branding</span>
+                        <h4>Brand Identity Design</h4>
+                        <p>Logo & Visual Guidelines</p>
+                        <div class="p-view-btn"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal-right d3"
+                    data-full="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1600">
+                    <div class="portfolio-img"><img
+                            src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop"
+                            alt="Video"></div>
+                    <div class="portfolio-overlay">
+                        <span class="p-tag">Video</span>
+                        <h4>Commercial Video Production</h4>
+                        <p>Motion Graphics & Editing</p>
+                        <div class="p-view-btn"><i class="fas fa-expand"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horizontal Branding Scroller -->
+            <div class="branding-scroller-section reveal-up">
+                <h3 class="scroller-title">Latest Social Media & <span class="gradient-text">Branding Work</span></h3>
+                <div class="scroller-wrapper">
+                    <button class="scroll-btn prev" id="prevBtn" aria-label="Previous"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <div class="portfolio-scroller" id="portfolioScroller">
+                        <div class="scroller-item"
+                            data-full="https://i.postimg.cc/J7DwLq2S/Whats_App_Image_2026_02_12_at_3_33_34_AM.jpg">
+                            <img src="https://i.postimg.cc/J7DwLq2S/Whats_App_Image_2026_02_12_at_3_33_34_AM.jpg"
+                                alt="Social Media Creative">
+                            <div class="scroller-overlay">
+                                <h4>Social Media Creative</h4>
+                                <p>Engagement-driven visuals</p>
+                            </div>
+                        </div>
+                        <div class="scroller-item" data-full="https://i.postimg.cc/wMHD0FyT/HSC_Logo.png">
+                            <img src="https://i.postimg.cc/wMHD0FyT/HSC_Logo.png" alt="HSC Logo">
+                            <div class="scroller-overlay">
+                                <h4>HSC Branding</h4>
+                                <p>Logo & Identity Design</p>
+                            </div>
+                        </div>
+                        <div class="scroller-item" data-full="https://i.postimg.cc/vmJr6GGk/3434.png">
+                            <img src="https://i.postimg.cc/vmJr6GGk/3434.png" alt="Digital Campaign">
+                            <div class="scroller-overlay">
+                                <h4>Digital Campaign</h4>
+                                <p>High-impact marketing design</p>
+                            </div>
+                        </div>
+                        <div class="scroller-item"
+                            data-full="https://i.postimg.cc/Rhrg9c33/Whats_App_Image_2026_02_12_at_3_34_20_AM.jpg">
+                            <img src="https://i.postimg.cc/Rhrg9c33/Whats_App_Image_2026_02_12_at_3_34_20_AM.jpg"
+                                alt="Content Strategy">
+                            <div class="scroller-overlay">
+                                <h4>Content Strategy</h4>
+                                <p>Visual storytelling</p>
+                            </div>
+                        </div>
+                        <div class="scroller-item"
+                            data-full="https://i.postimg.cc/sxZ4N1wD/Whats_App_Image_2026_02_12_at_3_33_29_AM.jpg">
+                            <img src="https://i.postimg.cc/sxZ4N1wD/Whats_App_Image_2026_02_12_at_3_33_29_AM.jpg"
+                                alt="Brand Promotion">
+                            <div class="scroller-overlay">
+                                <h4>Brand Promotion</h4>
+                                <p>Visibility & reach campaign</p>
+                            </div>
+                        </div>
+                        <div class="scroller-item"
+                            data-full="https://i.postimg.cc/W4Fm3dcm/Whats_App_Image_2026_02_12_at_3_34_12_AM.jpg">
+                            <img src="https://i.postimg.cc/W4Fm3dcm/Whats_App_Image_2026_02_12_at_3_34_12_AM.jpg"
+                                alt="Social Strategy">
+                            <div class="scroller-overlay">
+                                <h4>Social Strategy</h4>
+                                <p>Campaigns that deliver results</p>
+                            </div>
+                        </div>
+                        <div class="scroller-item"
+                            data-full="https://i.postimg.cc/gJx7GzN7/Whats_App_Image_2026_02_12_at_3_34_00_AM.jpg">
+                            <img src="https://i.postimg.cc/gJx7GzN7/Whats_App_Image_2026_02_12_at_3_34_00_AM.jpg"
+                                alt="Creative Illustration">
+                            <div class="scroller-overlay">
+                                <h4>Creative Illustration</h4>
+                                <p>Artistic brand storytelling</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-btn next" id="nextBtn" aria-label="Next"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="scroller-dots" id="scrollerDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <div class="lightbox-bg"></div>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Portfolio Image">
+        </div>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section-pad">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Let's Work <span class="gradient-text">Together</span></h2>
+                <p>Ready to grow your brand online? Send us a message and let's get started today.</p>
+            </div>
+            <div class="contact-wrapper reveal-up d2">
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="info-label">Email Us</p><a href="mailto:Nexadigitrix@gmail.com"
+                                style="color:inherit;font-weight:600;text-decoration:none;">Nexadigitrix@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <p class="info-label">Call / WhatsApp</p><a href="tel:+923311496774"
+                                style="color:inherit;font-weight:600;text-decoration:none;">+92 331 1496774</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <p class="info-label">Location</p><span>Karachi, Pakistan</span>
+                        </div>
+                    </div>
+                    <div class="social-row">
+                        <p>Follow Us</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/nexadigitrix/" class="social-icon" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                            <a href="https://web.facebook.com/profile.php?id=61579587724696" class="social-icon"
+                                target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/company/nexa-digitrix" class="social-icon" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- name="Contact_Form" is REQUIRED — matches document.forms['Contact_Form'] in script.js -->
+                <form class="contact-form" id="contactForm" name="Contact_Form" novalidate>
+
+                    <!-- Honeypot: hidden field — bots fill it, humans don't. Apps Script rejects bot submissions. -->
+                    <input type="text" name="mobile_number" style="display:none;" tabindex="-1" autocomplete="off">
+
+                    <!-- Hidden: tells Apps Script which sheet tab to write to -->
+                    <input type="hidden" name="sheet_name" value="Sheet1">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="c-name">Full Name <span>*</span></label>
+                            <!-- name="name" must match column header in Google Sheet Row 1 -->
+                            <input type="text" id="c-name" name="name" placeholder="John Smith" required
+                                autocomplete="name">
+                            <div class="field-bar"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="c-email">Email Address <span>*</span></label>
+                            <!-- name="email" must match column header in Google Sheet Row 1 -->
+                            <input type="email" id="c-email" name="email" placeholder="john@example.com" required
+                                autocomplete="email">
+                            <div class="field-bar"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-service">Service Interested In</label>
+                        <!-- name="service" must match column header in Google Sheet Row 1 -->
+                        <select id="c-service" name="service">
+                            <option value="">Select a Service</option>
+                            <option value="Website Design & Development">Website Design & Development</option>
+                            <option value="Search Engine Optimization">Search Engine Optimization</option>
+                            <option value="Social Media Marketing">Social Media Marketing</option>
+                            <option value="Digital Marketing & Paid Ads">Digital Marketing & Paid Ads</option>
+                            <option value="Branding & Identity Design">Branding & Identity Design</option>
+                            <option value="Graphic Designing">Graphic Designing</option>
+                            <option value="Content Writing">Content Writing</option>
+                            <option value="Video Editing">Video Editing</option>
+                            <option value="ERP & Business Solutions">ERP & Business Solutions</option>
+                        </select>
+                        <div class="field-bar"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Your Message</label>
+                        <!-- name="message" must match column header in Google Sheet Row 1 -->
+                        <textarea id="c-message" name="message" rows="5"
+                            placeholder="Tell us about your project..."></textarea>
+                        <div class="field-bar"></div>
+                    </div>
+                    <button type="submit" class="cta-btn form-submit">
+                        <span>Send Message</span><i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i> Message sent! We'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://i.postimg.cc/mZdCXhkP/0e2-Nexa-Digitrix-Logo.png" alt="Nexa Digitrix"
+                        class="footer-logo">
+                    <p>Connecting brands with digital growth. We help businesses thrive in the digital world with
+                        creativity and strategy.</p>
+                    <div class="social-icons" style="margin-top:1.5rem;">
+                        <a href="https://www.instagram.com/nexadigitrix/" class="social-icon" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=61579587724696" class="social-icon"
+                            target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/nexa-digitrix" class="social-icon" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About Us</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h5>Services</h5>
+                    <a href="#services">Web Development</a>
+                    <a href="#services">SEO</a>
+                    <a href="#services">Social Media</a>
+                    <a href="#services">Branding</a>
+                    <a href="#services">Video Editing</a>
+                </div>
+                <div class="footer-contact">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-envelope"></i> Nexadigitrix@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92 331 1496774</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nexa Digitrix. All rights reserved.</p>
+                <p>Crafted with <i class="fas fa-heart" style="color:#0056D2;"></i> by Nexa Digitrix Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

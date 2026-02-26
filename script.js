@@ -4,6 +4,28 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ---- MOBILE HORIZONTAL SCROLL FIX ----
+    // Prevents any element from causing left/right page scroll on mobile
+    document.documentElement.style.overflowX = 'hidden';
+    document.body.style.overflowX = 'hidden';
+
+    // Fix: find and clip any element wider than viewport
+    function fixOverflow() {
+        const vw = window.innerWidth;
+        document.querySelectorAll('*').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.right > vw + 5 || rect.left < -5) {
+                // Don't touch fixed/absolute positioned overlays
+                const pos = window.getComputedStyle(el).position;
+                if (pos !== 'fixed' && pos !== 'absolute' && !el.classList.contains('nav-links')) {
+                    el.style.maxWidth = '100%';
+                }
+            }
+        });
+    }
+    // Run after page fully loads
+    window.addEventListener('load', () => setTimeout(fixOverflow, 500));
+
     // ---- PAGE LOADER ----
     const loader = document.getElementById('pageLoader');
     window.addEventListener('load', () => {

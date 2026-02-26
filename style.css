@@ -1877,20 +1877,34 @@ button {
    ================================================ */
 .reveal-right {
     opacity: 0;
-    transform: translateX(60px);
+    transform: translateX(40px);
     transition: opacity 0.7s ease, transform 0.7s ease;
+    /* Prevent this from adding horizontal scroll */
+    will-change: transform, opacity;
 }
 
 .reveal-up {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: transform, opacity;
 }
 
 .reveal-right.visible,
 .reveal-up.visible {
     opacity: 1;
     transform: translate(0);
+}
+
+/* On small screens reduce the translate to prevent overflow */
+@media (max-width: 768px) {
+    .reveal-right {
+        transform: translateX(20px);
+    }
+
+    .reveal-up {
+        transform: translateY(20px);
+    }
 }
 
 .d1 {
@@ -1954,8 +1968,49 @@ button {
 }
 
 /* ================================================
-   RESPONSIVE
+   RESPONSIVE — Full Mobile Fix
    ================================================ */
+
+/* ── Root fix: prevent ANY horizontal overflow ── */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ── Fix elements that can overflow ── */
+section,
+footer,
+nav,
+.hero,
+.marquee-wrap {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ── Hero glows shouldn't overflow ── */
+.g1 {
+    width: min(500px, 80vw);
+    height: min(500px, 80vw);
+}
+
+.g2 {
+    width: min(400px, 70vw);
+    height: min(400px, 70vw);
+    right: -40px;
+}
+
+.g3 {
+    width: min(300px, 60vw);
+    height: min(300px, 60vw);
+}
+
+/* ── About image floats stay inside ── */
+.about-img-wrap {
+    overflow: visible;
+}
+
 @media (max-width: 1024px) {
     .about-grid {
         grid-template-columns: 1fr;
@@ -1971,29 +2026,40 @@ button {
         grid-template-columns: 1fr 1fr;
         gap: 2.5rem;
     }
+
+    .contact-wrapper {
+        gap: 3rem;
+        padding: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
     .section-pad {
-        padding: 70px 0;
+        padding: 60px 0;
     }
 
-    /* Nav mobile */
+    .container {
+        padding: 0 18px;
+    }
+
+    /* ── Nav mobile drawer ── */
     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
         height: 100vh;
-        width: min(320px, 85vw);
+        width: min(300px, 85vw);
         background: var(--nav-bg);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border-left: 1px solid var(--border);
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-        padding: 7rem 2rem 3rem;
+        padding: 6rem 1.5rem 3rem;
         z-index: 1000;
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
     }
 
     .nav-links.open {
@@ -2002,57 +2068,273 @@ button {
 
     .nav-link {
         width: 100%;
-        padding: 1rem 0;
+        padding: 0.9rem 0;
         border-bottom: 1px solid var(--border);
-        font-size: 1.1rem;
+        font-size: 1rem;
+        opacity: 1;
     }
 
     .mobile-right {
         display: flex;
     }
 
+    /* ── Logo smaller on mobile ── */
+    .logo img {
+        height: 50px;
+        transform: scale(1.1);
+    }
+
+    /* ── Hero ── */
+    .hero {
+        padding-top: 85px;
+        min-height: 100svh;
+    }
+
     .hero-content {
         text-align: center;
+        padding: 0 0 5rem;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
     }
 
     .hero-badge {
-        margin: 0 auto 1.5rem;
+        margin: 0 auto 1.2rem;
+        font-size: 0.78rem;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
     }
 
     .hero-stats {
         justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-num {
+        font-size: 1.8rem;
     }
 
     .hero-ctas {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
     }
 
     .hero-pills {
         justify-content: center;
     }
 
+    .pill {
+        font-size: 0.82rem;
+        padding: 0.45rem 1rem;
+    }
+
+    /* ── Marquee ── */
+    .marquee-content {
+        font-size: 0.82rem;
+        gap: 1.2rem;
+    }
+
+    /* ── Section titles ── */
+    .section-title {
+        margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+        font-size: clamp(1.6rem, 6vw, 2.4rem);
+    }
+
+    .section-title p {
+        font-size: 0.95rem;
+    }
+
+    /* ── Services ── */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-img-wrap {
+        height: 180px;
+    }
+
+    .service-body {
+        padding: 1.5rem;
+    }
+
+    .service-body h3 {
+        font-size: 1.15rem;
+    }
+
+    /* ── Why Choose Us ── */
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem 1.2rem;
+    }
+
+    .feature-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .feature-card p {
+        font-size: 0.85rem;
+    }
+
+    /* ── Process ── */
     .process-timeline {
         flex-direction: column;
         align-items: center;
+        overflow-x: visible;
     }
 
     .process-connector {
         width: 2px;
-        height: 40px;
-        flex: 0 0 40px;
+        height: 36px;
+        flex: 0 0 36px;
         margin: 0;
     }
 
+    .process-step {
+        min-width: unset;
+        width: 100%;
+        max-width: 340px;
+    }
+
+    /* ── About ── */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .about-img-wrap {
+        max-width: 100%;
+    }
+
+    .about-img-main img {
+        height: 280px;
+    }
+
+    .about-img-badge {
+        right: 0.5rem;
+        bottom: -3.5rem;
+        padding: 1rem;
+        min-width: 110px;
+    }
+
+    .badge-num {
+        font-size: 1.8rem;
+    }
+
+    .about-img-float {
+        left: 0.5rem;
+        top: 1rem;
+        padding: 0.7rem 1rem;
+        font-size: 0.82rem;
+    }
+
+    .about-img-float i {
+        font-size: 1.1rem;
+    }
+
+    .about-text {
+        padding-top: 1rem;
+    }
+
+    .about-text h2 {
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
+    }
+
+    .about-stats {
+        gap: 1.2rem;
+    }
+
+    .a-stat-num {
+        font-size: 1.6rem;
+    }
+
+    .about-mission {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* ── Portfolio ── */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .portfolio-item {
+        height: 260px;
+    }
+
+    /* ── Scroller ── */
+    .scroller-wrapper {}
+
+    .portfolio-scroller {
+        padding: 0.5rem 3rem;
+        gap: 1rem;
+    }
+
+    .scroller-item {
+        min-width: 240px;
+        height: 240px;
+    }
+
+    .scroll-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.85rem;
+    }
+
+    .scroller-title {
+        font-size: 1.4rem;
+    }
+
+    /* ── Contact ── */
     .contact-wrapper {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
-        padding: 2.5rem;
+        gap: 2rem;
+        padding: 1.8rem;
+        border-radius: 20px;
     }
 
     .form-row {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 0.85rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .info-item {
+        gap: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .info-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    /* ── Footer ── */
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -2061,52 +2343,188 @@ button {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+        font-size: 0.82rem;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+    .footer-logo {
+        height: 48px;
+    }
+
+    .site-footer {
+        padding: 3rem 0 0;
+    }
+
+    /* ── Back to top ── */
+    .back-to-top {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .section-pad {
+        padding: 50px 0;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.8rem, 9vw, 2.4rem);
+    }
+
+    .hero-sub {
+        font-size: 0.92rem;
+    }
+
+    .stat-sep {
+        display: none;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+    }
+
+    .cta-btn {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .cta-ghost {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.9rem;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
     }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-img-badge {
-        right: 0;
-        bottom: -1rem;
-    }
-
-    .about-img-float {
-        left: 0;
-        top: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2.4rem;
+    .feature-card {
+        padding: 1.5rem;
     }
 
     .scroller-item {
-        min-width: 260px;
-        height: 260px;
+        min-width: 210px;
+        height: 210px;
+    }
+
+    .portfolio-scroller {
+        padding: 0.5rem 2.5rem;
+    }
+
+    .contact-wrapper {
+        padding: 1.2rem;
+    }
+
+    .about-img-main img {
+        height: 220px;
+    }
+
+    .about-img-float {
+        display: none;
+    }
+
+    .service-tags {
+        gap: 0.3rem;
+    }
+
+    .service-tags span {
+        font-size: 0.72rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .hero-scroll-hint {
+        display: none;
+    }
+
+    .section-title h2 {
+        font-size: clamp(1.5rem, 7vw, 2rem);
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .pill {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .cta-btn,
     .cta-ghost {
-        padding: 0.85rem 1.6rem;
-        font-size: 0.95rem;
+        width: 100%;
+        justify-content: center;
     }
 
-    .contact-wrapper {
-        padding: 1.5rem;
+    .hero-ctas {
+        flex-direction: column;
     }
 
-    .portfolio-item {
-        height: 280px;
+    .scroller-item {
+        min-width: 180px;
+        height: 180px;
     }
+}
+
+/* ================================================
+   CONTACT FORM — Google Sheets extras
+   ================================================ */
+@keyframes form-shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    15% {
+        transform: translateX(-8px);
+    }
+
+    30% {
+        transform: translateX(8px);
+    }
+
+    45% {
+        transform: translateX(-6px);
+    }
+
+    60% {
+        transform: translateX(6px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+
+    90% {
+        transform: translateX(3px);
+    }
+}
+
+.form-shake {
+    animation: form-shake 0.55s ease;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid,
+.form-group select.invalid {
+    border-color: #f87171 !important;
+}
+
+.field-error {
+    display: block;
+    color: #f87171;
+    font-size: 0.82rem;
+    margin-top: -0.8rem;
+    margin-bottom: 0.5rem;
 }

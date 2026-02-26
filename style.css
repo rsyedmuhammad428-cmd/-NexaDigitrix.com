@@ -737,7 +737,7 @@ button {
     align-items: center;
     gap: 2rem;
     white-space: nowrap;
-    animation: marquee-scroll 30s linear infinite;
+    animation: marquee-scroll 8s linear infinite;
     font-family: var(--font-head);
     font-size: 0.9rem;
     font-weight: 600;
@@ -2527,4 +2527,5 @@ nav,
     font-size: 0.82rem;
     margin-top: -0.8rem;
     margin-bottom: 0.5rem;
+
 }
